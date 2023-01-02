@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(bottom: 5),
                     child: Text(
-                        "Good Morning",
+                      greetingMessage(),
                       style: GoogleFonts.poppins(
                         color: Colors.white.withOpacity(0.9),
                         fontSize: 28,
@@ -153,5 +153,32 @@ class Home extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+
+//  String greeting() {
+//   var hour = DateTime.now().hour;
+//   if (hour <= 12) {
+//     return "Good Morning";
+//   } else if ((hour > 12) && (hour <= 16)) {
+//     return "Good Afternoon";
+//   } else if ((hour > 16) && (hour < 20)) {
+//     return "Good Evening";
+//   } return "Good Day";
+// }
+
+String greetingMessage(){
+
+  var timeNow = DateTime.now().hour;
+
+  if (timeNow <= 12) {
+    return 'Good Morning';
+  } else if ((timeNow > 12) && (timeNow <= 16)) {
+    return 'Good Afternoon';
+  } else if ((timeNow > 16) && (timeNow < 20)) {
+    return 'Good Evening';
+  } else {
+    return 'Good Night';
   }
 }
