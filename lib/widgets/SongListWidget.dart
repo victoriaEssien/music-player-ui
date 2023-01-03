@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-class SongList extends StatelessWidget {
-  const SongList({Key? key}) : super(key: key);
+class SongListWidget extends StatelessWidget {
+
+  int number;
+  String songName, artistName, songDuration;
+
+  SongListWidget({
+    Key? key,
+    required this.number,
+    required this.songName,
+    required this.artistName,
+    required this.songDuration,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return Column(
         children: [
           SizedBox(height: 15),
-          for (int i = 1; i < 20; i++)
           Container(
             margin: EdgeInsets.only(top: 15, right: 12, left: 5),
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
             decoration: BoxDecoration(
               color: Color(0xFF30314D),
               borderRadius: BorderRadius.circular(10),
@@ -20,7 +28,7 @@ class SongList extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  i.toString(),
+                  number.toString(),
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -35,7 +43,7 @@ class SongList extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("People You Know",
+                      Text(songName,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,
@@ -46,7 +54,7 @@ class SongList extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            "Selena Gomez",
+                            artistName,
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.8),
                               fontSize: 14,
@@ -80,7 +88,7 @@ class SongList extends StatelessWidget {
                   //   color: Colors.white,
                   //   borderRadius: BorderRadius.circular(30),
                   // ),
-                  child: Text("3:14",
+                  child: Text(songDuration,
                     style: TextStyle(
                       color: Colors.white.withOpacity(0.6),
                       fontWeight: FontWeight.w500,
@@ -92,7 +100,6 @@ class SongList extends StatelessWidget {
             ),
           ),
         ],
-      ),
     );
   }
 }

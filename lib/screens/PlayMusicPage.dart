@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class PlayMusicPage extends StatelessWidget {
+class PlayMusicPage extends StatefulWidget {
   const PlayMusicPage({Key? key}) : super(key: key);
+
+  @override
+  State<PlayMusicPage> createState() => _PlayMusicPageState();
+}
+
+class _PlayMusicPageState extends State<PlayMusicPage> {
+
+  bool liked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +31,7 @@ class PlayMusicPage extends StatelessWidget {
               colors: [
                 Colors.black.withOpacity(0.3),
                 Colors.black.withOpacity(0.5),
+                Color(0xFF31314F).withOpacity(1),
                 Color(0xFF31314F).withOpacity(1),
                 Color(0xFF31314F).withOpacity(1),
               ],
@@ -75,7 +84,7 @@ class PlayMusicPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Imagine Dragons",
+                                  "People You Know",
                                   style: TextStyle(
                                     color: Colors.white.withOpacity(0.9),
                                     fontSize: 24,
@@ -84,7 +93,7 @@ class PlayMusicPage extends StatelessWidget {
                                 ),
                                 SizedBox(height: 10),
                                 Text(
-                                  "Singer Name",
+                                  "Selena Gomez",
                                   style: TextStyle(
                                       color: Colors.white.withOpacity(0.8),
                                       fontSize: 18,
@@ -92,10 +101,12 @@ class PlayMusicPage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Icon(
-                              Icons.favorite,
+                            IconButton(
+                              icon: liked? (Icon(Icons.favorite_rounded, size: 35,)) : (Icon(Icons.favorite_border, color: Colors.white.withOpacity(0.8), size: 35,)),
                               color: Colors.redAccent,
-                              size: 35,
+                              onPressed: () {
+                                setState(() => liked = !liked);
+                              },
                             ),
                           ],
                         ),
@@ -116,7 +127,7 @@ class PlayMusicPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "02:10",
+                                  "2:00",
                                   style: TextStyle(
                                     color: Colors.white.withOpacity(0.6),
                                     fontWeight: FontWeight.w500,
@@ -125,7 +136,7 @@ class PlayMusicPage extends StatelessWidget {
                                 ),
 
                                 Text(
-                                  "04:30",
+                                  "3:14",
                                   style: TextStyle(
                                     color: Colors.white.withOpacity(0.6),
                                     fontWeight: FontWeight.w500,

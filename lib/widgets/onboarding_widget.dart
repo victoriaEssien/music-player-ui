@@ -25,7 +25,7 @@ class OnboardingScreenWidget extends StatelessWidget {
             image: NetworkImage(image),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.6),
+                Color(0xFF152238).withOpacity(1.0),
                 BlendMode.darken
             ),
           ),
@@ -76,7 +76,9 @@ class OnboardingScreenWidget extends StatelessWidget {
                       textStyle: TextStyle(
                         fontSize: 20,
                       ),
-                      primary: Colors.deepPurple
+                      primary: Color(0xFF303151),
+                    elevation: 1,
+
                   ),
                 ),
               ),

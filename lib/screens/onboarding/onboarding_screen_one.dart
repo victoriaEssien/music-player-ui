@@ -9,7 +9,7 @@ class Onboarding extends StatelessWidget {
     return Scaffold(
       body: OnboardingScreenWidget(title: "Experience New Music",
               subtitle: "Lorem ipsum dolor sit amet, consectetur \nadipis elit, sed do eiusmod tempor incidunt \nut labore et dolore magna comconsequat.",
-              image: "https://t4.ftcdn.net/jpg/04/29/16/13/360_F_429161369_SPFahVfUe1YAU3EnQOFkOlxxUncAsrsB.jpg",
+              image: "https://wallpaperaccess.com/full/2068794.jpg",
               buttonText: "Get Started",
           ),
       );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widgets/Playlist.dart';
-import '../widgets/SongList.dart';
+import 'FavoritesList.dart';
+import 'Playlist.dart';
+import '../screens/SongList.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -140,7 +141,7 @@ class Home extends StatelessWidget {
                     children: [
                       const SongList(),
                       const PlayList(),
-                      const SongList(),
+                      const FavoritesList(),
                       const SongList(),
                       const SongList(),
                       const SongList(),
@@ -179,6 +180,6 @@ String greetingMessage(){
   } else if ((timeNow > 16) && (timeNow < 20)) {
     return 'Good Evening';
   } else {
-    return 'Good Night';
+    return 'Night Owl 😎';
   }
 }

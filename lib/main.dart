@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_streaming_app_ui/screens/PlayListPage.dart';
+import 'package:music_streaming_app_ui/screens/ViewPlaylistPage.dart';
 import 'package:music_streaming_app_ui/screens/PlayMusicPage.dart';
 import 'screens/onboarding/onboarding_screen_one.dart';
 
