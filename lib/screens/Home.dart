@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'AlbumsList.dart';
+import 'ArtistsList.dart';
 import 'FavoritesList.dart';
+import 'GenresList.dart';
 import 'Playlist.dart';
 import '../screens/SongList.dart';
 
@@ -18,8 +21,8 @@ class Home extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF303151).withOpacity(0.6),
-              Color(0xFF303151).withOpacity(0.9),
+              const Color(0xFF303151).withOpacity(0.6),
+              const Color(0xFF303151).withOpacity(0.9),
             ]
           ),
         ),
@@ -142,9 +145,9 @@ class Home extends StatelessWidget {
                       const SongList(),
                       const PlayList(),
                       const FavoritesList(),
-                      const SongList(),
-                      const SongList(),
-                      const SongList(),
+                      const ArtistsList(),
+                      const AlbumsList(),
+                      const GenresList(),
                     ],
                   ),),
                 ],
